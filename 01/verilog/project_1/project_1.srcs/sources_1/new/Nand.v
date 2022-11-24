@@ -26,16 +26,10 @@ module Nand(
     output out
     );
     
-wire aAndb=0;
-    
-initial begin
-    a=0;
-    b=0;
-    out=0;
-end
+wire aAndb;
    
-assign aAndb = a && b ;
-assign out = !aAndb;
+assign aAndb = a & b ;
+assign out = ~aAndb;
     
     
 endmodule
